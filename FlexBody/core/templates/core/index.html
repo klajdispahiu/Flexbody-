@@ -1,0 +1,14 @@
+{% extends 'core/base.html' %}
+
+{% block content %}
+<div>
+    {% if user.is_authenticated %}
+   <a href="{% url 'create_workout' %}"><button class="create">Create Workout</button></a>
+   <a href="{% url 'workouts_list' %}"><button class="create">Workouts List</button></a>
+
+    {% else %}
+    <h1>Pershendetje, bej log in / sign up per te pare/krijuar workoutet e tua!</h1>
+    {% endif %}
+</div>
+<img class="bg-img" src="../../../static/images/gym1.jpg" alt=""> 
+{% endblock %}

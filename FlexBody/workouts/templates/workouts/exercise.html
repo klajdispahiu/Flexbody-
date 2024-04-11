@@ -1,0 +1,41 @@
+{% extends 'core/base.html' %}
+{% load static %} 
+
+{% block content %}
+<a href="{{request.META.HTTP_REFERER|escape}}" class="back"><button>Back</button></a>
+
+<h1 style="color: red;">Choose the exercises you want to add to your workout</h1>
+<h3 style="color: gold;">{{ selected_category.name }} Exercises</h3>
+
+<form method="post" action="{% url 'my_workout' %}">
+    {% csrf_token %}
+    <div class="select">Enter Workout Name:</div>
+    <input type="text" name="workout_name">
+    
+    <div class="select">Select Exercises:</div>
+    <ul>
+      {% for exercise in exercises %}
+      <li>
+        <input type="checkbox" name="selected_exercise" id="exercise_{{ exercise.id }}" value="{{ exercise.id }}">
+        <label style="color: black;" for="exercise_{{ exercise.id }}">{{ exercise.name }}</label>
+      </li>
+      {% endfor %}  
+    </ul>
+    <button type="submit">Create Workout</button>
+  </form>
+  
+
+<img class="bg-img" src="{% static 'images/gym1.jpg' %}" alt=""> 
+{% endblock %}
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,15 @@
+{% extends 'core/base.html' %}
+{% load static %} 
+
+{% block content %}
+<a href="{{request.META.HTTP_REFERER|escape}}" class="back"><button>Back</button></a>
+    <h1 style="color: aqua;">Workout List</h1>
+    
+    {% for workout in workouts %}
+        <li><div><b>Workout Name:</b> <a href="{% url 'workout_detail' workout.id %}"> {{ workout.name }}</a></div>
+        <a href="{% url 'delete_workout' workout.id %}" class="delete">Delete</a></li>
+
+    {% endfor %}
+<img class="bg-img" src="{% static 'images/gym1.jpg' %}" alt=""> 
+
+{% endblock %}

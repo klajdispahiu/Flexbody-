@@ -1,0 +1,14 @@
+{% extends 'core/base.html' %}
+{% load static %} 
+{% block content %}
+<a href="{{request.META.HTTP_REFERER|escape}}" class="back"><button>Back</button></a>
+<div class="e_details">
+<div>
+<h1>{{selected_exercise.name}}</h1>
+<h1 style="color: antiquewhite;">{{selected_exercise.description}}</h1>
+</div>
+<div><h3>How to do it</h3></div>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/ixkQaZXVQjs?si=N7rbwjM6o5PL9EFX" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</div>
+<img class="bg-img" src="{% static 'images/gym1.jpg' %}" alt=""> 
+{% endblock %}

@@ -1,0 +1,44 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="{% static 'style.css' %}">
+  <title>Document</title>
+
+</head>
+
+<body>
+  <nav>
+    <a href="{% url 'index' %}">
+      <h1 class="logo">FlexBody</h1>
+    </a>
+    <h1>Home</h1>
+    <h1>About Us</h1>
+
+    {% if user.is_authenticated %}
+    <div class="button-container">
+      <a href="{% url 'log-out' %}" class="button signup-button">Log out</a>
+      <a href="#" class="button login-button">{{ user.name }}</a>
+    </div>
+  </nav>
+  
+
+  {% else %}
+  <div class="button-container">
+    <a href="{% url 'sign-up' %}" class="button signup-button">Sign Up</a>
+    <a href="{% url 'log-in' %}" class="button login-button">Login</a>
+  </div>    
+
+
+  {% endif %} 
+
+  <img class="bg-img" src="static/images/gym1.jpg" alt=""> 
+  {% block content %}
+  {% endblock content %}
+
+</body>
+
+</html>

@@ -1,0 +1,20 @@
+{% extends 'core/base.html' %}
+{% load static %} 
+{% block content %}
+<a href="{{request.META.HTTP_REFERER|escape}}" class="back"><button>Back</button></a>
+<div class="details">
+<h1 style="color: cadetblue;">WORKOUT DETAILS</h1>
+<h3>Workout name: {{ workout.name }}</h3>
+
+<h3>Selected Exercises:</h3>
+</div>
+    <ul>
+        {% for exercise in workout.exercises.all %}
+            <li><a href="{% url 'exercise_detail' exercise.id %}">{{ exercise.name }}</a></li>
+        {% empty %}
+            <li>No exercises selected for this workout.</li>
+        {% endfor %}
+    </ul>
+
+<img class="bg-img" src="{% static 'images/gym1.jpg' %}" alt=""> 
+{% endblock %}

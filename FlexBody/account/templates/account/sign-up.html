@@ -1,0 +1,38 @@
+{% extends 'core/base.html' %}
+{% load static %}
+<link rel="stylesheet" href="{% static 'style.css' %}">
+{% block content %}
+<div class="container">
+    <h2>Sign up</h1>
+
+    <form method="post" action="{% url 'sign-up' %}">
+        {% csrf_token %}
+
+        <div>
+            <label style="color: gold;">Name</label><br>
+            <input name="name" type="text">
+        </div>
+
+        <div>
+            <label>E-mail</label><br>
+            <input name="email" type="email">
+        </div>
+
+        <div>
+            <label>Password</label><br>
+            <input name="password1" type="password">
+        </div>
+
+        <div>
+            <label>Repeat password</label><br>
+            <input name="password2" type="password">
+        </div>
+
+        <div>
+            <button class="sign-up">
+                Sign up
+            </button>
+        </div>
+    </form>
+</div>
+{% endblock %}

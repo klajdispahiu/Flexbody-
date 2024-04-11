@@ -1,0 +1,20 @@
+{% extends 'core/base.html' %}
+{% load static %} 
+{% block content %}
+<button class="back"><a href="{{request.META.HTTP_REFERER|escape}}">Back</a></button>
+ <div style="display: flex; justify-content: space-between;">
+    {% for c in categories %}
+    <ul>       
+    <div style="color: red; list-style: none;"><a href="{% url 'exercise' c.id %}">{{ c }}</a></div> 
+</ul>      
+     {% endfor %} 
+    </div>
+<div class="categories-1">
+    <img src="../../../static/images/chest-workouts.png" alt="">  
+    <img src="../../../static/images/AX_STRONG-LOW-BACK-1-480x270.jpg" alt="">
+    <img src="../../../static/images/BICEPS_MAIN-IMAGE-480x270.png" alt="">
+</div>
+
+<img class="bg-img" src="../../../static/images/gym1.jpg" alt=""> 
+
+{% endblock %}
