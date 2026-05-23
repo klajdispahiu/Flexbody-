@@ -63,7 +63,13 @@ Flexbody is a responsive fitness web application built with Django and Python th
 
 
 7. **Access the application**
-   * Main Web App: `[http://127.0.0.1:8000/](http://127.0.0.1:8000/)`
-   * Admin Dashboard: `[http://127.0.0.1:8000/admin/](http://127.0.0.1:8000/admin/)`
+   * Main Web App: `(http://127.0.0.1:8000/)`
+   * Admin Dashboard: `(http://127.0.0.1:8000/admin/)`
 
-```
+
+<img width="1360" height="725" alt="Screenshot 2026-05-23 at 6 51 29 PM" src="https://github.com/user-attachments/assets/d819b1ae-2147-4c6d-b638-c47f83409921" />
+<img width="1368" height="736" alt="Screenshot 2026-05-23 at 6 54 44 PM" src="https://github.com/user-attachments/assets/2fcb2b8b-8628-4a12-a917-b3e87e984422" />
+<img width="1372" height="776" alt="Screenshot 2026-05-23 at 6 55 07 PM" src="https://github.com/user-attachments/assets/38081be3-8301-4567-acf4-d8e6a9f1a657" />
+<img width="1375" height="785" alt="Screenshot 2026-05-23 at 6 55 26 PM" src="https://github.com/user-attachments/assets/8a7b3996-31f4-457d-a8d0-0a0bfcd67069" />
+
+
